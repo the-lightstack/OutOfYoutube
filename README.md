@@ -3,4 +3,5 @@ An open source firefox add-on that let's you only watch youtube in a certain tim
 
 ## How to build it
 
-`zip -r -FS ../extension.xpi * --exclude 'extension.xpi'`
+`zip -r -FS ./extension.xpi * --exclude 'extension.xpi'`
+extension.xpi will be the file that contains the entire plugin.
