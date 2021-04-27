@@ -1,0 +1,42 @@
+{
+
+  "manifest_version": 2,
+  "name": "OutOfYoutube",
+  "version": "1.1",
+	
+  "description": "Redirects youtube to a chosen link after some defined time.",
+	
+  "background":{
+	"scripts":["background.js"]
+	
+  },
+  "options_ui": {
+	"page": "settings.html"
+  },
+  "permissions":[
+	"tabs",
+	"storage",
+	"webNavigation",
+	"*://*.youtube.com/*"
+	
+  ],
+
+  "icons": {
+    "48": "icons/new_icon.png"
+  },
+  "author":"LightStack",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["outOfYT.js"]
+    }
+  ],
+	"browser_specific_settings": {
+	  "gecko": {
+		"id": "dev@outofyoutube.com"
+	  }
+	}
+		 
+  
+}
